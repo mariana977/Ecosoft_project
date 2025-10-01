@@ -1,22 +1,16 @@
 Ecosoft_Project/
-├── Ecosoft/                   
-│   ├── backend/               # Lógica principal de backend
-│   │   ├── main.py            # Punto de entrada FastAPI
-│   │   ├── database.py        # Configuración conexión a BD
-│   │   ├── .env               # Variables de entorno
-│   │   ├── .env.example       # Ejemplo de configuración de entorno
-│   │   ├── requirements.txt   # Dependencias del backend
-│   │   ├── crud/              # Operaciones CRUD por entidad
-│   │   │   ├── cliente_crud.py
-│   │   │   ├── domiciliario_crud.py
-│   │   │   ├── empleados_crud.py
-│   │   │   ├── factura_crud.py
-│   │   │   ├── inventario_crud.py
-│   │   │   ├── material_crud.py
-│   │   │   ├── pago_proveedor_crud.py
-│   │   │   ├── pedido_crud.py
-│   │   │   ├── proveedor_crud.py
-│   │   ├── routes/            # Rutas organizadas por recurso
+├── Ecosoft/                          
+│   ├── backend/                      # Lógica backend con FastAPI
+│   │   ├── main.py                   # Punto de entrada FastAPI
+│   │   ├── database.py               # Configuración conexión BD
+│   │   ├── .env                      # Variables de entorno
+│   │   ├── .env.example              # Ejemplo de entorno
+│   │   ├── requirements.txt          # Dependencias
+│   │   │
+│   │   ├── crud/                     # Operaciones CRUD por entidad
+│   │   │   
+│   │   │
+│   │   ├── routes/                   # Endpoints organizados
 │   │   │   ├── cliente.py
 │   │   │   ├── domiciliario.py
 │   │   │   ├── empleados.py
@@ -27,10 +21,32 @@ Ecosoft_Project/
 │   │   │   ├── pedido.py
 │   │   │   ├── proveedor.py
 │   │   │   ├── __init__.py
-│   │
-│   ├── frontend/              # Carpeta del frontend (pendiente revisar)
-│   ├── db/                    # Migraciones / definiciones de BD
-│   ├── Ecosoft_Project/       # Posible duplicado o configs extra
-│   └── npm                    # Dependencias Node.js
 │
-├── package-lock.json          # Lock de npm
+│   ├── db/                           # Scripts y migraciones de BD
+│   │   ├── init.sql
+│
+│   ├── frontend/                     # Proyecto frontend (Vite + React + Tailwind)
+│   │   ├── index.html                # HTML principal
+│   │   ├── package.json              # Configuración npm
+│   │   ├── package-lock.json
+│   │   ├── postcss.config.js         # Configuración PostCSS
+│   │   ├── tailwind.config.js        # Configuración TailwindCSS
+│   │   │
+│   │   ├── src/                      # Código fuente del frontend
+│   │   │   ├── App.jsx               # Componente raíz de la app
+│   │   │   ├── index.css             # Estilos globales
+│   │   │   ├── main.jsx              # Punto de entrada React
+│   │   │   │
+│   │   │   ├── components/           # Componentes reutilizables
+│   │   │   │   ├── AdminPanel.jsx
+│   │   │   │   ├── Header.jsx
+│   │   │   │
+│   │   │   ├── pages/                # Vistas/páginas principales
+│   │   │   │   ├── Home.jsx
+│   │   │   │   ├── Index.jsx
+│   │   │   │   ├── Login.jsx
+│   │   │   │   ├── Register.jsx
+│
+├── npm/                              # Dependencias npm (extra fuera del frontend)
+├── package-lock.json                 # Lockfile npm
+
